@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div style="text-align: center;" ><h2> H Board</h2></div>
+    <div style="width: 20%; float: left; overflow: hidden;">
+        <button id="createDivButton">Oluştur</button></br>
+        <input type="text" id="imageUrlInput" placeholder="Resim URL'si">
+        <button id="createImageButton">Resim Ekle</button>
+        <input type="text" id="videoUrlInput" placeholder="Video URL'si">
+        <button id="createVideoButton">Video Ekle</button>
+    </div>
+    <div id="boardDiv"></div>
+    
+    <div id="context-menu" class="context-menu">
+        <ul>
+            <li><button id="deleteElementButton">Sil</button></li>
+            <li><button onclick="alert('Çoğalt seçildi')">Çoğalt</button></li>
+            <li><button onclick="alert('Özellikler seçildi')">Özellikler</button></li>
+            <li><button onclick="alert('Grupla seçildi')">Grupla</button></li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

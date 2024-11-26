@@ -1,0 +1,142 @@
+/* Tüm stil tanımlamaları burada */
+body {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    user-select: none; /* Tüm metin seçimlerini engeller */
+    overflow: hidden;
+}
+
+#createDivButton {
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#imageUrlInput {
+    margin-left: 20px;
+    padding: 10px;
+}
+
+#createImageButton {
+    padding: 10px 20px;
+    margin-left: -5px;
+}
+
+#videoUrlInput {
+    margin-left: 20px;
+    padding: 10px;
+}
+
+#createVideoButton {
+    padding: 10px 20px;
+    margin-left: -5px;
+}
+
+#boardDiv{
+    height: 700px;
+    width: 80%;
+    left: 20%;
+    background: url("bg.webp");
+    display: flex;
+    position: absolute;
+    overflow: hidden;
+}
+
+.draggable-div, .image-div {
+    position: absolute;
+    cursor: grab;
+    z-index: 1000; /* Diğer içeriklerin üzerinde görünsün */
+}
+
+.draggable-div {
+    resize: both;
+    overflow: auto;
+
+
+    width: 96px;
+    height: 96px;
+    min-width : 32px;
+    min-height : 32px;
+    background-color: white;
+    box-shadow: inset 0 0 0px 1px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s;
+    z-index: 1;
+}
+
+.selected-div {
+    box-shadow: 0 0 2px 1px black;
+}
+
+.image-div {
+    resize: both;
+    overflow: auto;
+
+    width: 96px;
+    height: 96px;
+    min-width : 32px;
+    min-height : 32px;
+    display: flex;
+    background-color: white;
+    box-shadow: inset 0 0 0px 1px black;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s;
+    z-index: 1;
+}
+
+.coordinates {
+    font-size: 12px;
+}
+
+.context-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    width: 120px;
+    height: 150px;
+}
+
+.context-menu ul {
+    list-style:none;
+    position: absolute;
+    padding: 10px 20px;
+    margin: 0;
+    padding: 5px;
+    box-shadow: inset 0 0 0px 2px lightgrey;
+    height: 140px;
+    width: -webkit-fill-available;
+}
+
+.context-menu li {
+    margin: 0;
+}
+
+.context-menu button {
+    width: 94%;
+    padding: 10px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    text-align: left;
+    
+}
+
+.context-menu button:hover {
+    background-color: #f0f0f0;
+}
+
+
+img {
+    -webkit-user-drag: none;
+    width: 100%;
+    height: 100%;
+}
+
+
